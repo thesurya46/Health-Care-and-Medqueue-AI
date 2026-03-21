@@ -88,7 +88,4 @@ MIT License - see [LICENSE](LICENSE) (create if needed)
 - GitHub: [thesurya46](https://github.com/thesurya46)
 - Project Link: [Health-Care-and-Medqueue-AI](https://github.com/thesurya46/Health-Care-and-Medqueue-AI)
 
----
-
-⭐ Star this repo if you find it useful!
 
