@@ -1,66 +1,94 @@
-📊 Two Products, One Platform
-1️⃣ MedQueue AI - Hospital Queue & Bed Predictor
-Problem:
-Patients waste 3-5 hours in hospital queues
-Emergency patients visit 4-5 hospitals before finding beds
-40,000+ preventable deaths annually
-Solution:
-Real-time wait time predictions (ML-powered)
-Live bed availability across city hospitals
-Virtual queue booking from home
-AI symptom checker
-Emergency ambulance routing
-Market:
-70,000 hospitals in India
-300M OPD visits/year
-TAM: ₹4,000+ crores
-Revenue (24 months): ₹40-60 lakhs
-Hospital subscriptions: ₹15K-50K/month
-Patient booking fees: ₹20-50/booking
-2️⃣ EduMatch AI - Personalized Career Counselor
-Problem:
-90% tier-2/3 students lack career counseling
-40% college dropout rate
-Wrong career choices → unemployment
-Solution:
-AI aptitude + personality assessment
-Personalized career roadmaps
-College & scholarship matching
-24/7 AI mentor chatbot
-Success probability predictions
-Market:
-120M students (class 8 to graduation)
-50,000 schools in tier-2/3 cities
-TAM: ₹3,150+ crores
-Revenue (24 months): ₹60-90 lakhs
-Student subscriptions: ₹999-2,999
-College partnerships: ₹50K-2L/year
-School white-label: ₹1-3L/year
-💻 Technology Stack
-Frontend: React 18 + TypeScript + Tailwind CSS
-Backend: Node.js 20 + Python (FastAPI)
-Database: Firebase (Firestore + Realtime DB)
-ML: TensorFlow, scikit-learn, XGBoost, Prophet
-LLM: GPT-4 / Claude with LangChain
-🎯 Competitive Advantages
-MedQueue AI:
-✅ Only platform with ML wait time predictions
-✅ Multi-hospital bed availability (city-wide)
-✅ Virtual queue booking (unique feature)
-✅ Ambulance integration
-EduMatch AI:
-✅ Comprehensive aptitude assessment
-✅ ML-based success probability (unique)
-✅ Affordable for tier-2/3 (₹999 vs ₹50K competitors)
-✅ Regional language support
-📈 Key Metrics (24-month targets)
-MedQueue:
-Hospitals: 100+
-Patients served: 500K+
-Wait time reduction: 85%
-Lives saved: 20K+ (projected)
-EduMatch:
-Students: 50,000+
-Schools: 20
-Career-course match: 85%
-Scholarship unlocked: ₹500 crores
+# Health Care and Medqueue AI
+
+A comprehensive AI-powered platform combining **MedQueue AI** for intelligent hospital queue and bed management with **EduMatch AI** for personalized career counseling and student guidance.
+
+## 🚀 Features
+
+### MedQueue AI (Patient & Hospital Management)
+- Real-time hospital wait time predictions using ML
+- City-wide live bed availability and allocation
+- Virtual queue booking and ambulance routing
+- AI symptom checker
+- Admin dashboard for staffing and analytics
+
+### EduMatch AI (Career Counseling)
+- AI-driven aptitude and personality assessments
+- Personalized career roadmaps and college matching
+- Success probability predictions
+- 24/7 AI mentor chatbot
+- Scholarship recommendations
+
+## 🛠 Tech Stack
+
+| Component | Technologies |
+|-----------|--------------|
+| **Frontend** | React 18, TypeScript, Tailwind CSS, Vite |
+| **Backend** | Node.js, Express, Python (FastAPI for ML) |
+| **Database** | Firebase Firestore & Realtime Database |
+| **ML/AI** | TensorFlow, scikit-learn, XGBoost, Prophet |
+| **LLM** | GPT-4 / Claude via LangChain |
+| **Testing** | Testsprite automated tests |
+| **Deployment** | Render, Firebase Hosting |
+
+## 📋 Quick Start
+
+### Prerequisites
+- Node.js 20+
+- Python 3.10+
+- Firebase project (see `firebase.json`)
+
+### 1. Frontend
+```bash
+npm install
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173)
+
+### 2. Backend
+```bash
+cd backend
+npm install
+node server.js
+```
+
+### 3. ML Service
+```bash
+cd ml-service
+pip install -r requirements.txt
+python main.py
+```
+
+## 🌐 Deployment
+- **Frontend**: `npm run build` → Firebase Hosting or Render
+- **Backend**: Render (see `render.yaml`)
+- **Firebase**: Run `firebase deploy`
+
+## 📁 Project Structure
+```
+.
+├── src/              # React frontend
+├── backend/          # Node.js API
+├── ml-service/       # Python ML models
+├── testsprite_tests/ # Automated UI tests
+├── public/           # Static assets
+└── configs/          # Tailwind, Vite, TS
+```
+
+## 🤝 Contributing
+1. Fork the repo
+2. Create feature branch `git checkout -b feature/AmazingFeature`
+3. Commit changes `git commit -m 'Add AmazingFeature'`
+4. Push `git push origin feature/AmazingFeature`
+5. Open PR
+
+## 📄 License
+MIT License - see [LICENSE](LICENSE) (create if needed)
+
+## 👥 Contact
+- GitHub: [thesurya46](https://github.com/thesurya46)
+- Project Link: [Health-Care-and-Medqueue-AI](https://github.com/thesurya46/Health-Care-and-Medqueue-AI)
+
+---
+
+⭐ Star this repo if you find it useful!
+
