@@ -1,0 +1,149 @@
+{
+    "tech_stack": [
+        "TypeScript",
+        "React 18.2.0",
+        "Vite 5.1.0",
+        "React Router DOM 6.22.0",
+        "Tailwind CSS 3.4.1",
+        "Framer Motion 11.0.3",
+        "Firebase 10.8.0",
+        "Google Maps API",
+        "Lucide React Icons"
+    ],
+    "features": [
+        {
+            "name": "Landing Page",
+            "description": "Main landing page with navigation, product showcase for MedQueue AI and EduMatch AI, feature sections",
+            "files": [
+                "src/pages/Landing.tsx"
+            ],
+            "routes": [
+                "/"
+            ],
+            "buttons": [
+                "Navigation links (MedQueue, EduMatch, Technology, About)",
+                "Sign In button",
+                "Launch Platform button (MedQueue)",
+                "Start Counseling button (EduMatch)"
+            ]
+        },
+        {
+            "name": "Authentication",
+            "description": "User authentication system with role selection (Patient, Hospital Admin, Student), Firebase integration for login/signup",
+            "files": [
+                "src/pages/Auth.tsx",
+                "src/lib/firebase.ts"
+            ],
+            "routes": [
+                "/auth"
+            ],
+            "buttons": [
+                "Patient Portal selection",
+                "Hospital Admin selection",
+                "Student Dashboard selection",
+                "Back to selection",
+                "Sign In / Create Account",
+                "Toggle Login/Signup"
+            ]
+        },
+        {
+            "name": "MedQueue Admin Dashboard",
+            "description": "Hospital admin dashboard for queue management, bed allocation, ML-powered wait time predictions, patient notifications",
+            "files": [
+                "src/pages/MedQueueAdmin.tsx",
+                "src/components/BedAllocation.tsx",
+                "src/components/SymptomChecker.tsx"
+            ],
+            "routes": [
+                "/medqueue"
+            ],
+            "buttons": [
+                "Logo/Home navigation",
+                "Admittance button",
+                "Sidebar navigation (Dashboard, Wards & Beds, Live Queue, Staffing, Analytics, Settings)",
+                "Logout button",
+                "Filter toggles (Today/History)",
+                "Notify Patient button",
+                "Call In button",
+                "Emergency alert button (Symptom Checker)",
+                "Send message button (Symptom Checker)"
+            ],
+            "api_endpoints": [
+                "GET /api/hospitals/:hospitalId/queue",
+                "POST /api/hospitals/:hospitalId/admit",
+                "POST /api/queue/call-in",
+                "POST /api/predict/wait-time",
+                "POST /api/notify/booking",
+                "POST /api/notify/emergency",
+                "POST /api/chat"
+            ]
+        },
+        {
+            "name": "EduMatch Student Dashboard",
+            "description": "Student career counseling platform with aptitude testing, AI-powered career matching, personalized mentoring",
+            "files": [
+                "src/pages/EduMatchStudent.tsx",
+                "src/components/AptitudeTest.tsx"
+            ],
+            "routes": [
+                "/edumatch"
+            ],
+            "buttons": [
+                "Retake Aptitude Test button",
+                "Back button",
+                "Bell/Logout button",
+                "See All Matches button",
+                "Send to AI Mentor button",
+                "Answer selection buttons (Aptitude Test)",
+                "View Profile button (Aptitude Test)"
+            ],
+            "api_endpoints": [
+                "GET /api/students/:studentId/recommendations",
+                "POST /api/predict/career-match",
+                "POST /api/chat"
+            ]
+        },
+        {
+            "name": "Hospital Finder",
+            "description": "Patient-facing interface to find nearby hospitals, check bed availability, reserve beds, with Google Maps integration",
+            "files": [
+                "src/pages/HospitalFinder.tsx"
+            ],
+            "routes": [
+                "/find-hospital"
+            ],
+            "buttons": [
+                "Logo/Home navigation",
+                "Search input",
+                "Filter button (opens modal)",
+                "Reserve Bed button",
+                "Map Navigation button",
+                "Phone Call button",
+                "Apply Filters button (in modal)"
+            ],
+            "api_endpoints": [
+                "POST /api/notify/booking"
+            ]
+        },
+        {
+            "name": "API Integration Layer",
+            "description": "Centralized API client for backend communication, including ML predictions, notifications, and AI chat",
+            "files": [
+                "src/lib/api.ts"
+            ],
+            "functions": [
+                "fetchQueue",
+                "fetchRecommendations",
+                "checkHealth",
+                "chatWithAI",
+                "sendOTP",
+                "sendBookingNotification",
+                "sendEmergencyAlert",
+                "predictWaitTime",
+                "predictCareerMatch",
+                "admitPatient",
+                "callInPatient"
+            ]
+        }
+    ]
+}

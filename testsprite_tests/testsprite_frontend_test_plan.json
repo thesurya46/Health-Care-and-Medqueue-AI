@@ -1,0 +1,76 @@
+[
+    {
+        "id": "TC001",
+        "title": "Landing Page - Navigation Header Links",
+        "description": "Verify all header navigation links work correctly",
+        "priority": "high",
+        "steps": [
+            "Navigate to /",
+            "Click 'MedQueue' link in header",
+            "Verify redirected to /auth",
+            "Go back to /",
+            "Click 'EduMatch' link in header",
+            "Verify redirected to /auth"
+        ]
+    },
+    {
+        "id": "TC002",
+        "title": "Landing Page - Product Card Buttons",
+        "description": "Verify Launch Platform and Start Counseling buttons navigate to auth",
+        "priority": "high",
+        "steps": [
+            "Navigate to /",
+            "Click 'Launch Platform' button on MedQueue card",
+            "Verify redirected to /auth"
+        ]
+    },
+    {
+        "id": "TC003",
+        "title": "Auth Page - Portal Selection",
+        "description": "Verify all portal selection buttons work",
+        "priority": "high",
+        "steps": [
+            "Navigate to /auth",
+            "Click 'Patient Portal' button",
+            "Verify portal selection form appears",
+            "Click 'Back to selection' button",
+            "Verify returned to portal selection"
+        ]
+    },
+    {
+        "id": "TC004",
+        "title": "MedQueue Admin - Logo Navigation",
+        "description": "Verify logo navigates back to landing page",
+        "priority": "medium",
+        "steps": [
+            "Navigate to /medqueue",
+            "Click on the MedQueue logo",
+            "Verify redirected to /"
+        ]
+    },
+    {
+        "id": "TC005",
+        "title": "EduMatch - See All Matches Toggle",
+        "description": "Verify see all matches button toggles display",
+        "priority": "high",
+        "steps": [
+            "Navigate to /edumatch",
+            "Wait for career matches to load",
+            "Click See all matches button",
+            "Verify button text changes to Show top 3"
+        ]
+    },
+    {
+        "id": "TC006",
+        "title": "Hospital Finder - Filter Modal",
+        "description": "Verify filter button opens and closes modal",
+        "priority": "high",
+        "steps": [
+            "Navigate to /find-hospital",
+            "Click filter button",
+            "Verify filter modal appears",
+            "Click X button to close modal",
+            "Verify modal closes"
+        ]
+    }
+]

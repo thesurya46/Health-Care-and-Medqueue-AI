@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "project": "MedQueue AI & EduMatch AI",
+    "date": "2026-02-10",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "MedQueue AI and EduMatch AI is a dual-platform system designed to streamline healthcare queue management and enhance educational career counseling. MedQueue AI provides hospital admins with tools for patient queue management, bed allocation, and AI-driven wait time predictions, while EduMatch AI offers students aptitude testing and AI-powered career matching with personalized mentoring.",
+  "core_goals": [
+    "Enable hospital administrators to efficiently manage patient queues and bed allocations with AI-enhanced insights.",
+    "Provide students with personalized career guidance through aptitude assessments and AI-driven recommendations.",
+    "Deliver a seamless and unified authentication and user management experience for diverse user roles including patients, hospital admins, and students.",
+    "Integrate real-time backend services and AI models for predictive analytics and interactive assistance.",
+    "Facilitate patient access to nearby hospital information, bed availability, and reservations through an intuitive, map-based interface."
+  ],
+  "key_features": [
+    "Landing Page showcasing MedQueue AI and EduMatch AI with clear navigation and CTA buttons.",
+    "Robust Authentication system using Firebase with role selection for patients, hospital admins, and students.",
+    "MedQueue Admin Dashboard featuring queue management, bed visualization, symptom checking, and communication tools.",
+    "EduMatch Student Dashboard offering aptitude tests, career matching predictions, and AI mentor chat functionalities.",
+    "Hospital Finder interface with Google Maps integration for finding hospitals, viewing bed availability, and reserving beds.",
+    "API Integration Layer consolidating backend communication for ML predictions, notifications, and AI chat interactions."
+  ],
+  "user_flow_summary": [
+    "Users land on the main Landing Page and can navigate to either MedQueue or EduMatch platforms.",
+    "Users authenticate via a unified Auth page selecting their role and signing in or creating an account.",
+    "Hospital Admins use the MedQueue Admin Dashboard to manage patient queues, allocate beds, predict wait times, and notify patients.",
+    "Students access the EduMatch Student Dashboard to take aptitude tests, receive tailored career recommendations, and interact with an AI mentor.",
+    "Patients use the Hospital Finder to search for nearby hospitals, check bed availability, and reserve beds using mapped data and filters."
+  ],
+  "validation_criteria": [
+    "All user roles must be able to create accounts, login, and access their respective dashboards reliably.",
+    "Patient queue data and bed allocation visualizations should update in real-time and reflect backend state accurately.",
+    "AI predictions for wait times and career matches should be tested for accuracy and consistency with ML backend outputs.",
+    "Notification and emergency alert functions must reliably send messages through integrated communication services.",
+    "Google Maps integration must display correct hospital locations with accurate bed availability status and reservation functionality.",
+    "UI components must be responsive, accessible, and align with the modern design system implemented with Tailwind CSS and Framer Motion."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "React 18.2.0",
+      "Vite 5.1.0",
+      "React Router DOM 6.22.0",
+      "Tailwind CSS 3.4.1",
+      "Framer Motion 11.0.3",
+      "Firebase 10.8.0",
+      "Google Maps API",
+      "Lucide React Icons"
+    ],
+    "features": [
+      {
+        "name": "Landing Page",
+        "description": "Main landing page with navigation, product showcase for MedQueue AI and EduMatch AI, feature sections",
+        "files": [
+          "src/pages/Landing.tsx"
+        ],
+        "routes": [
+          "/"
+        ],
+        "buttons": [
+          "Navigation links (MedQueue, EduMatch, Technology, About)",
+          "Sign In button",
+          "Launch Platform button (MedQueue)",
+          "Start Counseling button (EduMatch)"
+        ]
+      },
+      {
+        "name": "Authentication",
+        "description": "User authentication system with role selection (Patient, Hospital Admin, Student), Firebase integration for login/signup",
+        "files": [
+          "src/pages/Auth.tsx",
+          "src/lib/firebase.ts"
+        ],
+        "routes": [
+          "/auth"
+        ],
+        "buttons": [
+          "Patient Portal selection",
+          "Hospital Admin selection",
+          "Student Dashboard selection",
+          "Back to selection",
+          "Sign In / Create Account",
+          "Toggle Login/Signup"
+        ]
+      },
+      {
+        "name": "MedQueue Admin Dashboard",
+        "description": "Hospital admin dashboard for queue management, bed allocation, ML-powered wait time predictions, patient notifications",
+        "files": [
+          "src/pages/MedQueueAdmin.tsx",
+          "src/components/BedAllocation.tsx",
+          "src/components/SymptomChecker.tsx"
+        ],
+        "routes": [
+          "/medqueue"
+        ],
+        "buttons": [
+          "Logo/Home navigation",
+          "Admittance button",
+          "Sidebar navigation (Dashboard, Wards & Beds, Live Queue, Staffing, Analytics, Settings)",
+          "Logout button",
+          "Filter toggles (Today/History)",
+          "Notify Patient button",
+          "Call In button",
+          "Emergency alert button (Symptom Checker)",
+          "Send message button (Symptom Checker)"
+        ],
+        "api_endpoints": [
+          "GET /api/hospitals/:hospitalId/queue",
+          "POST /api/hospitals/:hospitalId/admit",
+          "POST /api/queue/call-in",
+          "POST /api/predict/wait-time",
+          "POST /api/notify/booking",
+          "POST /api/notify/emergency",
+          "POST /api/chat"
+        ]
+      },
+      {
+        "name": "EduMatch Student Dashboard",
+        "description": "Student career counseling platform with aptitude testing, AI-powered career matching, personalized mentoring",
+        "files": [
+          "src/pages/EduMatchStudent.tsx",
+          "src/components/AptitudeTest.tsx"
+        ],
+        "routes": [
+          "/edumatch"
+        ],
+        "buttons": [
+          "Retake Aptitude Test button",
+          "Back button",
+          "Bell/Logout button",
+          "See All Matches button",
+          "Send to AI Mentor button",
+          "Answer selection buttons (Aptitude Test)",
+          "View Profile button (Aptitude Test)"
+        ],
+        "api_endpoints": [
+          "GET /api/students/:studentId/recommendations",
+          "POST /api/predict/career-match",
+          "POST /api/chat"
+        ]
+      },
+      {
+        "name": "Hospital Finder",
+        "description": "Patient-facing interface to find nearby hospitals, check bed availability, reserve beds, with Google Maps integration",
+        "files": [
+          "src/pages/HospitalFinder.tsx"
+        ],
+        "routes": [
+          "/find-hospital"
+        ],
+        "buttons": [
+          "Logo/Home navigation",
+          "Search input",
+          "Filter button (opens modal)",
+          "Reserve Bed button",
+          "Map Navigation button",
+          "Phone Call button",
+          "Apply Filters button (in modal)"
+        ],
+        "api_endpoints": [
+          "POST /api/notify/booking"
+        ]
+      },
+      {
+        "name": "API Integration Layer",
+        "description": "Centralized API client for backend communication, including ML predictions, notifications, and AI chat",
+        "files": [
+          "src/lib/api.ts"
+        ],
+        "functions": [
+          "fetchQueue",
+          "fetchRecommendations",
+          "checkHealth",
+          "chatWithAI",
+          "sendOTP",
+          "sendBookingNotification",
+          "sendEmergencyAlert",
+          "predictWaitTime",
+          "predictCareerMatch",
+          "admitPatient",
+          "callInPatient"
+        ]
+      }
+    ]
+  }
+}

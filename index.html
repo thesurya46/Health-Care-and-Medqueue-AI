@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Health & Ed | MedQueue & EduMatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+      fetch('http://127.0.0.1:5000/api/debug-log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'error', msg, url, lineNo, columnNo, stack: error ? error.stack : null })
+      }).catch(() => { });
+      return false;
+    };
+    window.onunhandledrejection = function (event) {
+      fetch('http://127.0.0.1:5000/api/debug-log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'unhandledrejection', reason: event.reason ? (event.reason.stack || event.reason) : null })
+      }).catch(() => { });
+    };
+    console.log('Diagnostic script active');
+  </script>
+</head>
+
+<body class="bg-[#0a0a0a] text-white antialiased">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

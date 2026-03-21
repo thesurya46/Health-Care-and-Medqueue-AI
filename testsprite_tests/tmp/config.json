@@ -1,0 +1,17 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5173",
+  "executionArgs": {
+    "projectName": "trithon",
+    "projectPath": "c:/Quick Share/trithon",
+    "testIds": [],
+    "additionalInstruction": "Execute all 17 test cases focusing on button functionality: navigation links, portal selection, logout buttons, filter toggles, see all matches toggle, aptitude test flow, filter modal, map navigation, and symptom checker interactions. Verify all buttons are clickable and trigger expected UI changes or navigation.",
+    "envs": {
+      "API_KEY": "sk-user-0lK_fpnxs91WGw8Nvy2heaM5Wb0reRShaAYVA0QmEZlq8aPH_DJAknYYNjvFxkAYgDG-18soOXePKzqHynInCLID9_Et6sPhMfyLGN81e3kBjarxcD0mz5RTE0mkl66RRFc"
+    }
+  },
+  "serverPort": 60851,
+  "proxy": "http://7c008b2e-e9d0-4531-84ef-40be3eb1d1c4:LW38vjxNUzJXvSchHb0O371SzLl4I8J0@tun.testsprite.com:8080"
+}
