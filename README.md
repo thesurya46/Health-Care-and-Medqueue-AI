@@ -1,10 +1,14 @@
 # Health Care and Medqueue AI
 
+![Health Care and Medqueue AI Banner](https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
+
 A comprehensive AI-powered platform combining **MedQueue AI** for intelligent hospital queue and bed management with **EduMatch AI** for personalized career counseling and student guidance.
 
 ## 🚀 Features
 
 ### MedQueue AI (Patient & Hospital Management)
+![Hospital Management](https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)
+
 - Real-time hospital wait time predictions using ML
 - City-wide live bed availability and allocation
 - Virtual queue booking and ambulance routing
@@ -12,6 +16,8 @@ A comprehensive AI-powered platform combining **MedQueue AI** for intelligent ho
 - Admin dashboard for staffing and analytics
 
 ### EduMatch AI (Career Counseling)
+![Career Counseling](https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)
+
 - AI-driven aptitude and personality assessments
 - Personalized career roadmaps and college matching
 - Success probability predictions
@@ -87,5 +93,9 @@ MIT License - see [LICENSE](LICENSE) (create if needed)
 ## 👥 Contact
 - GitHub: [thesurya46](https://github.com/thesurya46)
 - Project Link: [Health-Care-and-Medqueue-AI](https://github.com/thesurya46/Health-Care-and-Medqueue-AI)
+
+---
+
+⭐ Star this repo if you find it useful!
 
 
