@@ -4,6 +4,8 @@
 
 A comprehensive AI-powered platform combining **MedQueue AI** for intelligent hospital queue and bed management with **EduMatch AI** for personalized career counseling and student guidance.
 
+Visit Our Website :- https://frontend-production-05c9.up.railway.app/patient
+
 ## 🚀 Features
 
 ### MedQueue AI (Patient & Hospital Management)
@@ -92,8 +94,7 @@ MIT License - see [LICENSE](LICENSE) (create if needed)
 
 ## 👥 Contact
 - GitHub: [thesurya46](https://github.com/thesurya46)
-- Project Link: [Health-Care-and-Medqueue-AI](https://github.com/thesurya46/Health-Care-and-Medqueue-AI)
-
+- Project Link: https://frontend-production-05c9.up.railway.app/patient
 ---
 
 ⭐ Star this repo if you find it useful!
