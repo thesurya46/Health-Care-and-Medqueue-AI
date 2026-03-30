@@ -95,6 +95,7 @@ MIT License - see [LICENSE](LICENSE) (create if needed)
 ## 👥 Contact
 - GitHub: [thesurya46](https://github.com/thesurya46)
 - Project Link: https://frontend-production-05c9.up.railway.app/patient
+- Searching for collaborators --
 ---
 
 ⭐ Star this repo if you find it useful!
